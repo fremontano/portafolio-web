@@ -581,29 +581,33 @@
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-        <div class="col-lg-6 col-md-12 p-4  form-content">
+        <div class="col-lg-6 col-md-12 p-4 form-content py-5">
           <div class="text-container">
             <h4 class="mb-3">Puedes contactarme para oportunidades laborales como desarrollador.</h4>
             <form action="https://formspree.io/f/mqkrpdwv" method="POST">
               <div class="mb-3">
-                <input type="text" class="form-control rounded-5" placeholder="Nombre de la empresa o persona">
+                <input type="text" class="form-control rounded-5" name="nombre"
+                  placeholder="Nombre de la empresa o persona" required>
               </div>
               <div class="mb-3">
-                <input type="email" class="form-control rounded-5" placeholder="dirección de correo electrónico">
+                <input type="email" class="form-control rounded-5" name="email"
+                  placeholder="Dirección de correo electrónico" required>
               </div>
               <div class="mb-3">
-                <input type="tel" class="form-control rounded-5" placeholder="Número de contacto">
+                <input type="text" class="form-control rounded-5" name="telefono" placeholder="Número de contacto"
+                  required>
               </div>
-              <div class="mb-3 ">
-                <textarea class="form-control rounded-5 py-2" placeholder="Escribe tu mensaje o solicitud aquí"
-                  rows="10"></textarea>
-                <div class="mt-2 d-grid ">
-                  <input type="submit" value="Enviar" class="btn btn-primary rounded-5">
-                </div>
+              <div class="mb-3">
+                <textarea class="form-control rounded-5 py-2" name="mensaje"
+                  placeholder="Escribe tu mensaje o solicitud aquí" required rows="10"></textarea>
+              </div>
+              <div class="mt-2 d-grid">
+                <input type="submit" value="Enviar" class="btn btn-primary rounded-5">
               </div>
             </form>
           </div>
         </div>
+
       </div>
     </div>
   </section>

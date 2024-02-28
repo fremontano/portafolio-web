@@ -6,16 +6,93 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-.header {
-    background: #151515 url('/images/intro-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    background-attachment: fixed;
+
+.navbar {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    height: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
-/* Overlay  */
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.navbar .nav-link:hover {
+    text-decoration: none;
+}
+
+.linkedin i {
+    color: blue;
+}
+
+.github i {
+    color: black;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+
+.nav-link {
+    color: #5a575e;
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar .nav-link:hover {
+    color: #d149dd;
+}
+
+.navbar .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #d149dd;
+    ;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before,
+.nav-link:active::before {
+    width: 100%;
+    visibility: visible;
+}
+
+/* Excluir el borde inferior para los enlaces de LinkedIn y GitHub */
+.linkedin::before,
+.github::before {
+    display: none;
+}
+
+
+
+/**/
+
+.header {
+    background: #151515 url('/images/intro-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .header::after {
     content: '';
     position: absolute;
@@ -26,26 +103,285 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.header .text-container {
+.text-container {
     z-index: 10;
+    bottom: -350px;
 }
 
-.header .social {
-    /* border: 1px solid white; */
-    bottom: 70px;
-}
-
-.header .social i {
+.social {
+    bottom: -220px;
     color: #fff;
+}
+
+.social i {
+    color: #fff;
+}
+
+@media (max-width:992px) {
+    .header .social i {
+        font-size: 40px;
+    }
+}
+
+.text-purple {
+    color: #d149dd;
+}
+
+.social i {
     transition: color 0.3s ease-in-out;
 }
 
-.header .social i:hover {
+.social i:hover {
     color: #d149dd;
 }
 
-.text-green {
-    color: #d149dd;
+.social i {
+    transition: transform 0.3s ease-in-out;
 }
 
-@media (max-width:767px) {}
+.social i:hover {
+    transform: translateY(-7px);
+}
+
+
+/* About  */
+.about-img img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+
+.profile i {
+    color: #d149dd;
+    font-weight: bold;
+}
+
+.icons img {
+    width: 20px;
+}
+
+
+
+
+
+.service,
+.card {
+    border: 1px solid #f5ebeb;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.circle {
+    height: 70px;
+    width: 70px;
+    background-color: lightgray;
+    border-radius: 50%;
+    color: black;
+    padding: 12px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.card:hover .circle {
+    background-color: #ac2fb8;
+    color: white;
+    transition: 0.5s;
+
+}
+
+/* Messages  */
+.messages {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/* Projects  */
+.card {
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* Agregamos una sombra */
+    transition: box-shadow 0.3s ease;
+    /* Transición de la sombra */
+}
+
+.card:hover {
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+    /* Efecto de sombra al pasar el ratón */
+}
+
+.card .card-img-top {
+    border-radius: 10px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    /* Transiciones para la propiedad filter y transform */
+}
+
+.card:hover .card-img-top {
+    filter: brightness(70%);
+    /* Oscurecer la imagen al pasar el ratón */
+    transform: scale(1.1);
+    /* Agrandar la imagen al pasar el ratón */
+}
+
+/* Estilo para los botones */
+.btn {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-github,
+.btn-world {
+    background-color: #333;
+}
+
+.btn-github:hover {
+    background-color: #212121;
+}
+
+
+.btn-world:hover {
+    background-color: #212121;
+}
+
+
+/* Estilos para el modo claro */
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.form-content .btn-primary {
+    background-color: #d149dd;
+}
+
+.form-content .btn-primary:hover {
+    background-color: #ac2fb8;
+}
+
+
+/* Contact Form  */
+.map iframe {
+    left: 0;
+    top: 0;
+    height: 400px;
+    width: 100%;
+    border: none;
+}
+
+
+
+
+/* Footer  */
+.footer {
+    position: relative;
+    min-height: 120px;
+    background-color: #3586ff;
+    padding: 20px 50px;
+}
+
+.footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('/images/wave.png');
+    background-size: 1000px 100px;
+}
+
+.footer .wave#wave1 {
+    z-index: 100;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+.footer .wave#wave2 {
+    z-index: 99;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+.footer .wave#wave3 {
+    z-index: 100;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+.footer .wave#wave4 {
+    z-index: 99;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02 {
+
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.icon-link {
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-link:hover {
+    transform: translateY(-5px);
+}
+
+
+.py-7 {
+    margin-top: 10%;
+}
+
+.footer .nav-link {
+    border: none;
+}

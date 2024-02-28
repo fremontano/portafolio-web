@@ -1,11 +1,12 @@
+// Modo dark theme 
 
 
-
+// letter typing    
 function runTypingEffect() {
 
     const text = 'Soy, Freider Montaño.';
     const typingElement = document.querySelector('#typing-text');
-    const typingDelay = 250;
+    const typingDelay = 200;
 
     typeText(text, typingElement, typingDelay);
 }

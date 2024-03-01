@@ -12,7 +12,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/lightbox.min.css" />
   <link rel="stylesheet" href="css/style.css">
-  <title>Freyder Montaño | Web Developer</title>
+  <script src="js/scrollreveal.js"></script>
+  <title>Portafolio Freyder </title>
 </head>
 
 <body>
@@ -28,7 +29,8 @@
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> <img src="/images/logo.png" alt="logo" width="200">
+          </h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -51,7 +53,7 @@
                   target="_blank">
                   <span style="display: inline-block; vertical-align: middle;">Linkedin</span>
                   <span style="display: inline-block; vertical-align: middle;"><i
-                      class="fab fa-linkedin fa-2x"></i></span>
+                      class="fab fa-linkedin fa-2x me-4"></i></span>
                 </a>
               </li>
               <li class="nav-item icon">
@@ -74,26 +76,26 @@
       class="text-container w-75 mx-auto position-relative d-flex flex-column justify-content-center align-items-center ">
       <div class="overlay"></div>
       <h5 class="  fs-3 fw-bold text-purple">
-        Hola, Mundo
+        "Hello, World"
       </h5>
       <h1 class="display-1 fw-bold text-white" id="typing-text"></h1>
       <p class="role text-white text-capitalize fs-4">
-        <span class="fs-3 text-purple fw-bold">Desarollador Backend, </span>
+        <span class="fs-3 text-purple fw-bold">Desarrollador Backend, </span>
         <span class="fs-3">Bienvenidos a mi portafolio</span>
       </p>
 
 
       <div class="social d-flex gap-3 position-absolute">
-        <a href="#">
+        <a href="mailto:fremontano24@gmail.com">
           <i class="fa fa-envelope fa-3x"></i>
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/feed/?trk=seo-authwall-base_sign-in-submit" target="_blank">
           <i class="fa-brands fa-linkedin fa-3x me-2"></i>
         </a>
-        <a href="#">
+        <a href="https://wa.me/56947997211?text=Hola%20dejame%20un%20mensaje" target="_blank">
           <i class="fa-brands fa-whatsapp fa-3x me-2"></i>
         </a>
-        <a href="#">
+        <a href="https://github.com/freyderMontanoPerlaza" target="_blank">
           <i class="fa-brands fa-github fa-3x me-2"></i>
         </a>
       </div>
@@ -112,13 +114,14 @@
         <div class="row">
           <div class="col-lg-3 d-flex align-self-center justify-content-center ">
             <!-- image  -->
-            <div class="about-img">
+            <div class="about-img scroll-about-image">
               <img src="/images/IMG-20240218-WA0012.jpg" alt="persona" class="img-fluid">
             </div>
           </div>
-          <div class="col-lg-9 lead">
-            <p class="fw-semibold">Soy un Desarollador Backend,</p>
-            <p class="lead">apasionado por la tecnologia, Tengo experiencia en C # .NET y habilidades media en
+          <div class="col-lg-9 lead scroll-about-text">
+            <p class="fw-semibold  text-center text-lg-start mt-3">Soy un Desarrollador Backend,</p>
+            <p class="lead text-center text-lg-start">apasionado por la tecnologia, Tengo experiencia en C # .NET y
+              habilidades media en
               React y
               MongoDB.siempre listo para enfrentar nuevos desafíos y contribuir a proyectos
               innovadores
@@ -149,9 +152,9 @@
             </li>
             <li class="list-group-item mb-3">
               <h5 class="texts-transform">
-                <i class="bi bi-cake2"></i> Fecha de nacimiento:
+                <i class="bi bi-house-door-fill"></i> Nacionalidad:
               </h5>
-              <p>06/05/1990 <br>Florida Valle, Colombia</p>
+              <p>Colombiano</p>
             </li>
             <li class="list-group-item mb-3">
               <h5 class="texts-transform">
@@ -279,7 +282,8 @@
           <div class="row mt-4 text-center border-top  pt-3">
             <div class="col-12">
               <a href="tel:+56947997211" class="btn btn-lg btn-dark me-2">Contactame</a>
-              <a download="curriculo" class="btn btn-lg btn-dark" href="/images/Professional_CV.pdf">Dowload Mi CV</a>
+              <a download="curriculo" class="btn btn-lg btn-dark" href="/images/Freyder-Montaño-FlowCV.pdf">Descarga Mi
+                CV</a>
             </div>
           </div>
         </div>
@@ -291,7 +295,7 @@
   <section class="portafolio py-5 bg-light text-center" id="projects">
     <div class="container">
       <div class="text-center mb-5">
-        <h4 class="text-uppercase fw-bold text-green fs-2 text-purple">Portafolio</h4>
+        <h4 class="text-uppercase fw-bold text-green fs-2 text-purple portafolio-Scrolltitle">Portafolio</h4>
         <hr class="w-25 mx-auto">
         <h2 class="mb-4">Mis trabajos recientes</h2>
         <p class="lead">
@@ -304,7 +308,7 @@
       <!-- Projects  -->
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="projects">
         <div class="col">
-          <div class="card">
+          <div class="card portafolio-ScrollCard">
             <img src="/images/api-villa.png" class="card-img-top" alt="card">
             <div class="card-body">
               <h5 class="card-title d-flex align-self-start"> API .NET 7</h5>
@@ -320,7 +324,7 @@
           </div>
         </div><!--end card-->
         <div class="col">
-          <div class="card">
+          <div class="card portafolio-ScrollCard2">
             <img src="/images/blog-mastery.png" class="card-img-top" alt="card">
             <div class="card-body">
               <h5 class="card-title d-flex align-self-start">Blog mastery</h5>
@@ -342,7 +346,7 @@
           </div>
         </div><!--end card-->
         <div class="col">
-          <div class="card">
+          <div class="card portafolio-ScrollCard3">
             <img src="/images/vera-web.png" class="card-img-top" alt="card">
             <div class="card-body">
               <h5 class="card-title d-flex align-self-start">Vera web site</h5>
@@ -362,7 +366,7 @@
           </div>
         </div><!--end card-->
         <div class="col">
-          <div class="card">
+          <div class="card portafolio-ScrollCard4">
             <img src="/images/web-recetas.png" class="card-img-top" alt="card">
             <div class="card-body">
               <h5 class="card-title d-flex align-self-start">Pagina web de recetas</h5>
@@ -375,7 +379,7 @@
                 <a href="https://github.com/freyderMontanoPerlaza/app-food" target="_blank"
                   class="btn btn-outline-dark   d-inline-block btn-github"><i class="bi bi-github"></i>
                   GitHub</a>
-                <a href="https://github.com/freyderMontanoPerlaza/app-food" target="_blank"
+                <a href="https://stunning-buttercream-e11d8f.netlify.app/" target="_blank"
                   class="btn btn-outline-dark d-inline-block mx-4  btn-world"><i class="bi bi-globe"></i>
                   Sitio
                   Web</a>
@@ -384,7 +388,7 @@
           </div>
         </div><!--end card-->
         <div class="col">
-          <div class="card">
+          <div class="card portafolio-ScrollCard4">
             <img src="/images/web-bebidas.png" class="card-img-top" alt="card">
             <div class="card-body">
               <h5 class="card-title d-flex align-self-start">Pagina web de Bebidas</h5>
@@ -406,7 +410,7 @@
           </div>
         </div><!--end card-->
         <div class="col">
-          <div class="card">
+          <div class="card portafolio-ScrollCard4">
             <img src="/images/veterinaria.png" class="card-img-top" alt="card">
             <div class="card-body">
               <h5 class="card-title d-flex align-self-start">Seguimiento de Pacientes</h5>
@@ -437,17 +441,18 @@
       <div class="col-md-6">
         <h1 class="display-6 fw-bold">Actual Mente <br /> estoy enfocando en</h1>
         <ul class="list-group list-group-flush lh-lg">
-          <li class="list-group-item">
+          <li class="list-group-item scroll-about-li1">
             <i class="bi bi-check-lg fs-2"></i>
             SQL Server
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item scroll-about-li2">
             <i class="bi bi-check-lg fs-2"></i>
             en la creación de mi proyecto API web RESTful utilizando C#, con
             autenticación.
           </li>
         </ul>
-        <p>Aspiro a aplicar estos conocimientos en el desarrollo y consumo de aplicaciones del mundo real utilizando
+        <p class="scroll-p">Aspiro a aplicar estos conocimientos en el desarrollo y consumo de
+          aplicaciones del mundo real utilizando
           la última versión de la API .NET 7.</p>
       </div>
       <div class="col-md-6">
@@ -482,7 +487,7 @@
   <section id="service" class="services py-5">
     <div class="container">
       <div class="text-center">
-        <h4 class="text-center fw-bold text-purple display-3">Servicios</h4>
+        <h4 class="text-center fw-bold text-purple display-3 portafolio-Scrolltitle">Servicios</h4>
         <hr class="w-25 mx-auto  ">
         <h2 class="mb-4">¿Que puedo hacer por ti?</h2>
         <p class="lead">
@@ -493,7 +498,7 @@
 
       <div class="row pt-5">
         <div class="col-lg-4 mb-3">
-          <div class="card text-center">
+          <div class="card text-center scrollCard-left">
             <div class="card-body">
               <div class="circle">
                 <span><i class="bi bi-pc-display fs-3"></i> </span>
@@ -504,7 +509,7 @@
           </div>
         </div><!--end card-->
         <div class="col-lg-4 mb-3">
-          <div class="card text-center">
+          <div class="card text-center scrollCard-left">
             <div class="card-body">
               <div class="circle">
                 <span><i class="bi bi-phone fs-3"></i> </span>
@@ -516,7 +521,7 @@
           </div>
         </div><!--end card-->
         <div class="col-lg-4 mb-3">
-          <div class="card text-center">
+          <div class="card text-center scrollCard-left">
             <div class="card-body">
               <div class="circle">
                 <span><i class="bi bi-code-slash fs-3"></i> </span>
@@ -528,7 +533,7 @@
           </div>
         </div><!--end card-->
         <div class="col-lg-4 mb-3">
-          <div class="card text-center">
+          <div class="card text-center scrollCard-left">
             <div class="card-body">
               <div class="circle">
                 <span><i class="bi bi-gem fs-3"></i></span>
@@ -540,7 +545,7 @@
           </div>
         </div><!--end card-->
         <div class="col-lg-4 mb-3">
-          <div class="card text-center">
+          <div class="card text-center scrollCard-left">
             <div class="card-body">
               <div class="circle">
                 <span><i class="bi bi-camera fs-3"></i> </span>
@@ -552,7 +557,7 @@
           </div>
         </div><!--end card-->
         <div class="col-lg-4 mb-3">
-          <div class="card text-center">
+          <div class="card text-center scrollCard-left">
             <div class="card-body">
               <div class="circle">
                 <span><i class="bi bi-cart4 fs-3"></i></span>
@@ -635,18 +640,20 @@
         <div class="col-md-4">
           <h5 class="fs-5">Links</h5>
 
-          <div class="list-unstyled content-links d-flex  justify-content-between ">
-            <a href="#header" class="nav-link text-white">Inicio</a>
-            <a href="#projects" class="nav-link text-white">Proyectos</a>
-            <a href="#skill" class="nav-link text-white">Habilidades</a>
-            <a href="#contact" class="nav-link text-white">Contacto</a>
-            <a href="#service" class="nav-link text-white">Servicios</a>
+          <div class="list-unstyled content-links  d-flex flex-column flex-lg-row me-5 gap-2">
+            <a href="#header" class="nav-link text-white ">Inicio</a>
+            <a href="#projects" class="nav-link text-white ">Proyectos</a>
+            <a href="#skill" class="nav-link text-white ">Habilidades</a>
+            <a href="#contact" class="nav-link text-white ">Contacto</a>
+            <a href="#service" class="nav-link text-white ">Servicios</a>
           </div>
         </div>
 
-        <div class="col-md-4 ">
-          <h5 class="fs-5">Puedes contactarme en:</h5>
-          <div class="d-flex gap-4 content-icons ">
+        <div class="col-md-4   d-flex flex-column">
+          <h5 class="fs-5 text-start text-lg-end  text-md-end mt-3">Puedes contactarme en:</h5>
+
+          <div
+            class="d-flex gap-4 content-icons  d-flex  justify-content-start justify-content-md-end justify-content-lg-end  ">
             <a href="https://wa.me/56947997211?text=Hola%20dejame%20un%20mensaje" target="_blank"
               class="nav-link text-white icon-link"><i class="bi bi-whatsapp fs-3"></i></a>
 
@@ -660,8 +667,9 @@
         </div>
       </div>
     </div>
+    <p class="text-center text-white p-4 m-0 p-md-2 p-lg-2 ">&copy; 2024 freyder montaño. Todos los derechos reservados.
+    </p>
 
-    <p class="text-center text-white pt-2">&copy; 2024 freyder montaño. Todos los derechos reservados.</p>
 
   </footer>
 
